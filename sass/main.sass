@@ -1,0 +1,207 @@
+@import vars
+@import fonts
+@import libs
+//default setting
+::placeholder
+	color: #DCDCDC
+
+::selection
+	background-color: $accent
+	color: #fff
+ul
+	list-style: none
+	margin: 0
+	padding: 0
+
+a
+	&:hover
+		text-decoration: none
+		color: inherit
+
+button, select
+	&:focus
+		outline: none
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.7
+	font-family: 'SpaceGrotesk', sans-serif
+	overflow-x: hidden
+	color: #fff
+	background: #1D1D22
+	&::-webkit-scrollbar  // скроллбар
+		width: 5px
+		background-color: #252525
+	&::-webkit-scrollbar-thumb  // ползунок
+		background-color: #a7a7a7
+		border-radius: 8px
+
+.ov-hidden
+	overflow: hidden
+
+@keyframes ticker 
+	0%
+		transform: translate3d(0, 0, 0)
+		visibility: visible
+	100% 
+		transform: translate3d(-100%, 0, 0)
+		visibility: hidden
+
+.btn
+	display: inline-flex
+	align-items: center
+	border-radius: 30px
+	&_primary
+		background: linear-gradient(93.33deg, #6767EF 0%, #FFFFFF 100%)
+		padding: 16px 30px 16px 35px
+		color: $dark
+		font-weight: 500
+		line-height: 1.25
+		transition: .3s
+		img
+			margin-left: 15px
+		&:hover
+			color: $dark
+			background: linear-gradient(93.33deg, #FFFFFF 0%, #6767EF 100%)
+
+//default setting end
+
+.header
+	padding: 40px 0 266px
+	background-image: url(../img/headerbg.png)
+	background-repeat: no-repeat
+	background-size: cover
+	position: relative
+	height: 100vh
+	&_burger
+		border: 1px solid #fff
+		border-radius: 50%
+		width: 50px
+		height: 50px
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		cursor: pointer
+		.burger-line + .burger-line
+			margin-top: 9px
+		.burger-line
+			width: 28px
+			height: 1px
+			background: #fff
+			display: flex
+	&_top
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&_bottom
+		margin-top: 160px
+		margin-left: auto
+		margin-right: auto
+		position: relative
+	&_label
+		font-weight: 500
+		color: #dcdcdc
+		line-height: 1.25
+		margin-bottom: 15px
+	&_title
+		font-size: 82px
+		line-height: 1.07
+		text-transform: capitalize
+		margin-bottom: 34px
+	&_view
+		display: flex
+		align-items: center
+		&-circle
+			margin-right: 40px
+			width: 140px
+			height: 140px
+			background-image: url(../img/bordergradient.svg)
+			background-size: cover
+			padding-left: 140px
+			position: relative
+			span
+				color: #fff
+				width: 100%
+				height: 100%
+				position: absolute
+				left: 0
+				top: 0
+				display: flex
+				align-items: center
+				justify-content: center
+				font-size: 14px
+				font-weight: 500
+				line-height: 1.3
+		&-text
+			font-size: 20px
+			color: #dcdcdc
+	&_scroll
+		position: absolute
+		bottom: 168px
+	&_bg
+		position: absolute
+		right: 0
+		bottom: -120px
+
+.ticker
+	overflow: hidden
+	&_wrapper
+		display: inline-block
+		white-space: nowrap
+		padding-right: 100%
+		box-sizing: content-box
+		animation-iteration-count: infinite
+		animation-timing-function: linear
+		animation-name: ticker
+		animation-duration: 30s
+	&_wrap
+		padding-top: 120px
+		max-width: 100%
+		width: 100%
+		overflow: hidden
+		padding-left: 100%
+		box-sizing: content-box
+	&_item
+		display: inline-flex
+		align-items: center
+		color: $text
+		padding: 0 30px
+		span
+			font-size: 30px
+			line-height: 1.25
+		img
+			margin-left: 30px
+
+.primary
+	padding-top: 200px
+	&_title
+		font-size: 40px
+		line-height: 1.3
+		text-transform: capitalize
+		margin-bottom: 20px
+	&_text
+		font-size: 20px
+		line-height: 1.9
+		color: $text
+		margin-bottom: 40px
+	&_parallax
+		display: flex
+		justify-content: flex-end
+		&-wrapper
+			position: relative
+		&-item
+			position: absolute
+			left: 25%
+			bottom: 35%
+
+@import media

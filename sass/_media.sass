@@ -7,12 +7,122 @@
 @media (max-width: 1199.90px)
 // ≥992px
 @media (max-width: 991.90px)
-	
+    .header
+        padding-bottom: 140px
+        &_scroll
+            bottom: 40px
+        &_bottom
+            margin-top: 120px
+        &_menu
+            padding-top: 120px
+            background: $accent
+            padding: 120px 50px 0
+            overflow-x: hidden
+            overflow-y: auto
+            &-link
+                font-size: 42px
+            &-wrapper
+                padding-top: 0
+                height: auto
+                background: none
+                border: none
+                padding: 0
+            &-circmini
+                display: none
+            &-item
+                width: fit-content
+                &:hover  
+                    &::after
+                        width: 120%
+            &-title
+                padding-top: 90px
+            &-mail
+                margin-top: 16px
+            &-socials
+                margin-top: 60px
+                flex-direction: row
+                flex-wrap: wrap
+            &-social
+                width: 50%
+                margin-bottom: 20px
+            &-social + &-social
+                margin-top: 0
+            &-circ
+                top: -40%
+                right: -10%
+        &_view
+            &-circle
+                margin-right: 20px
+
+
 // ≥768px
 @media (max-width: 767.90px)
+    .header
+        &_title
+            font-size: 40px
+        &_view
+            flex-direction: column-reverse
+            &-circle
+                margin-right: 0
+                margin-top: 40px
+        &_bg
+            top: -25px
+            bottom: auto
+            img
+                width: 120px
+
+    .ticker
+        &_wrap
+            padding-top: 80px
+
+    .primary
+        padding-top: 130px
+        position: relative
+        &_parallax
+            position: absolute
+            top: 15px
+            right: 0
+            display: block
+            justify-content: flex-start
+            &-wrap
+                position: static
+            &-wrapper
+                transform: rotate(0deg)!important
+                img
+                    width: 140px
+                    height: 140px
+            &-item                
+                img
+                    transform: rotate(0deg)!important
+                    width: 48px
+                    height: 47px
 
 // ≥576px
 @media (max-width: 575.90px)
+    .header
+        &_scroll
+            display: none
+        &_bg
+            img
+                transform: rotate(0deg)!important
+                width: 80px
+        &_logo
+            z-index: 6
+        &_menu
+            height: 100%
+            margin-left: 0
+            margin-right: 0
+            width: 100%
+            padding: 120px 20px 0
+            &-link
+                font-size: 40px
+            &-title
+                font-size: 26px
+            &-circ
+                z-index: 99
+                bottom: auto
+                right: -30%
+                top: -80%
 
 
 /*==========  Mobile First  ==========*/

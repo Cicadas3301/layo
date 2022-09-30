@@ -140,12 +140,13 @@ body
 		height: 100vh
 		width: calc(100vw + 30px)
 		z-index: 6
-		display: flex
 		justify-content: space-between
+		flex-wrap: wrap
 		margin-left: -15px
 		margin-right: -15px
 		transition: .65s
 		display: none
+		overflow: auto
 		&.active
 			display: flex
 			animation-name: transfer
@@ -163,12 +164,13 @@ body
 			bottom: -100%
 		&-left
 			animation-duration: .5s
+			animation-delay: 0.45s
 		&-middle
 			animation-duration: 1s
 			animation-delay: 0.95s
 		&-right
 			animation-duration: 1.5s
-			animation-delay: 1.4s
+			animation-delay: 1.45s
 		&-middle, &-right
 			border-left: 1px solid #393939
 		&-glass
@@ -242,10 +244,10 @@ body
 			right: 19px
 			&.transfer
 				animation-name: transfer
-				animation-duration: .85s
+				animation-duration: 1.1s
 			&.transferback
 				animation-name: transfer
-				animation-duration: .85s
+				animation-duration: 1.1s
 			img
 				transition: .3s
 		&-circ
@@ -320,7 +322,7 @@ body
 		animation-iteration-count: infinite
 		animation-timing-function: linear
 		animation-name: ticker
-		animation-duration: 30s
+		animation-duration: 25s
 	&_wrap
 		padding-top: 120px
 		max-width: 100%

@@ -8,6 +8,14 @@ $(document).ready(function () {
 			parallax[i].style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
 		});    
 	}
+	let parallax2 = document.querySelectorAll('.mouse-parallax2');
+	for (let i = 0; i < parallax2.length; i++){
+		window.addEventListener('mousemove', function(e) { 
+			let x = e.clientX / window.innerWidth;
+			let y = e.clientY / window.innerHeight;     
+			parallax2[i].style.transform = 'translate(-' + y * 50 + 'px, -' + x * 50 + 'px)';
+		});    
+	}
 
 	(function () {
 		var btn = $('.js-scroll');

@@ -5,8 +5,29 @@
 
 // ≥1200px
 @media (max-width: 1199.90px)
+
+    .primary
+        &_bgimg
+            &#par4
+                top: 15%
+        &--reverse
+            .primary
+                &_wrapper
+                    padding: 0
+                    padding-left: 40px
+
+    .send
+        &_title
+            font-size: 66px
+        &_form
+            padding-left: 15px
+
 // ≥992px
 @media (max-width: 991.90px)
+
+    .mouse-parallax, .mouse-parallax2
+        transform: none!important
+
     .header
         padding-bottom: 140px
         &_scroll
@@ -17,8 +38,6 @@
             padding-top: 120px
             background: $accent
             padding: 120px 50px 0
-            overflow-x: hidden
-            overflow-y: auto
             &-link
                 font-size: 42px
             &-wrapper
@@ -54,9 +73,18 @@
             &-circle
                 margin-right: 20px
 
+    .footer
+        &_nav
+            &-item
+                margin-right: 40px
+
+    .send
+        &_title
+            font-size: 48px
 
 // ≥768px
 @media (max-width: 767.90px)
+
     .header
         &_title
             font-size: 40px
@@ -78,6 +106,48 @@
     .primary
         padding-top: 130px
         position: relative
+        .row
+            flex-direction: column-reverse
+        &--reverse
+            .row
+                flex-direction: column
+            .primary
+                &_wrapper
+                    padding: 0
+        &_image
+            margin-bottom: 40px
+        &_subtitle
+            margin-bottom: 80px
+        &_bgimg
+            &#par1
+                top: auto
+                bottom: -90px
+                right: 0
+                left: auto
+                img
+                    width: 70px
+                    transform: rotate(180deg)
+            &#par2
+                top: 0px
+                left: -50px
+                right: auto
+                img
+                    width: 140px
+            &#par3
+                bottom: -100%
+                top: auto
+                right: 0
+                left: auto
+                img
+                    width: 120px
+                    transform: rotate(180deg)
+            &#par4
+                bottom: 80px
+                left: auto
+                top: auto
+                right: 0
+                img
+                    width: 100px
         &_parallax
             position: absolute
             top: 15px
@@ -97,9 +167,38 @@
                     width: 48px
                     height: 47px
 
+    .send
+        background: none
+        &_title
+            font-size: 52px
+        &_form
+            padding-left: 0
+            margin-top: 40px
+
+    .footer
+        background-image: url(../img/footerbg.png)
+        background-position: bottom left
+        background-size: 100% auto
+        background-repeat: no-repeat
+        &_right
+            justify-content: space-between
+            margin-top: 50px
+        &_copy
+            text-align: center
+            margin-top: 40px
+        &_nav
+            flex-direction: column
+            &-item
+                margin-bottom: 20px
+                width: auto
+
 // ≥576px
 @media (max-width: 575.90px)
+
     .header
+        &_bottom
+            padding-left: 0
+            padding-right: 0
         &_scroll
             display: none
         &_bg
@@ -124,6 +223,31 @@
                 right: -30%
                 top: -80%
 
+    .primary
+        &_name
+            font-size: 26px
+        &_button
+            .btn
+                display: flex
+                width: 100%
+                justify-content: center
+
+    .send
+        padding: 120px 0
+        &_title
+            font-size: 40px
+        &_form
+            &-button
+                .btn
+                    width: 100%
+                    display: flex
+                    justify-content: center
+
+    .footer
+        &_title
+            font-size: 26px
+        &_right
+            padding-right: 40px
 
 /*==========  Mobile First  ==========*/
 

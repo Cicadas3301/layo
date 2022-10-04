@@ -17,6 +17,8 @@ $(document).ready(function () {
 		});    
 	}
 
+	new WOW().init();
+
 	(function () {
 		var btn = $('.js-scroll');
 		btn.click(function () {

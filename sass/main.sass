@@ -111,6 +111,43 @@ body
 	position: relative
 	&--works
 		background-image: url(../img/worksbg.png)
+	&--contact
+		background-image: url(../img/contactbg.png)
+	&_triangle
+		position: absolute
+		right: 0
+		bottom: -50px
+	&_contact
+		padding-top: 60px
+		&-left
+			display: flex
+			flex-direction: column
+			justify-content: center
+			height: 100%
+			padding-right: 70px
+		&-title
+			font-size: 60px
+			line-height: 1.1
+			text-transform: capitalize
+			margin-bottom: 40px
+		&-mail
+			color: #fff
+			text-decoration: underline
+			font-size: 30px
+			line-height: 1.25
+		.send_form
+			background: linear-gradient(290.19deg, rgba(22, 22, 27, 0.2) 0.74%, rgba(22, 22, 27, 0.4) 98.32%)
+			backdrop-filter: blur(4px)
+			border-radius: 20px
+			padding: 40px
+			&-input
+				input
+					border-color: #fff
+		&-name
+			margin-bottom: 40px
+			font-size: 30px
+			line-height: 1.25
+			text-transform: capitalize
 	&::after
 		content: ''
 		position: absolute
@@ -522,6 +559,13 @@ body
 	padding-top: 50px
 	border-top: 1px solid #e5e5e5
 	padding-bottom: 60px
+	position: relative
+	&--contact
+		margin-top: -130px
+	&_parallax
+		position: absolute
+		left: 0
+		bottom: 0
 	&_logo
 		margin-bottom: 20px
 		display: flex

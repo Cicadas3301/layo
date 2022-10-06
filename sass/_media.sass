@@ -43,6 +43,10 @@
                 top: auto
                 bottom: 0
 
+    .footer
+        &--contact
+            margin-top: -140px
+
 // ≥992px
 @media (max-width: 991.90px)
 
@@ -51,6 +55,16 @@
 
     .header
         padding-bottom: 140px
+        &--contact
+            &::after
+                height: 130px
+        &_contact
+            &-left
+                margin-bottom: 50px
+            .send_form
+                padding: 0
+                background: none
+                backdrop-filter: blur(0)
         &_scroll
             bottom: 40px
         &_bottom
@@ -95,6 +109,10 @@
                 margin-right: 20px
 
     .footer
+        &_parallax
+            display: none
+        &--contact
+            margin-top: 0
         &_nav
             &-item
                 margin-right: 40px
@@ -107,6 +125,28 @@
 @media (max-width: 767.90px)
 
     .header
+        &--contact
+            background-image: url(../img/contactmobbg.png)
+            &::after
+                display: none
+        &_triangle
+            bottom: -160px
+            width: 175px
+        &_contact
+            padding-top: 120px
+            &-left
+                margin-bottom: 120px
+                padding-right: 0
+                height: auto
+            &-title
+                font-size: 40px
+                margin-bottom: 20px
+            .send_form
+                margin-top: 0
+            &-mail
+                font-size: 20px
+            &-name
+                font-size: 24px
         &_wrapper
             padding-top: 100px
             .header_title
@@ -229,6 +269,8 @@
         background-position: bottom left
         background-size: 100% auto
         background-repeat: no-repeat
+        &--contact
+            background: none
         &_right
             justify-content: space-between
             margin-top: 50px

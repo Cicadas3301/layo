@@ -827,9 +827,14 @@ body
 	&_parallax
 		position: absolute
 		right: 0
-		top: 75%
+		top: 70%
+		overflow-y: visible
+		overflow-x: hidden
+		padding: 60px 0
 		img
 			width: 300px
+			position: relative
+			right: -93px
 	&_wrapper
 		font-size: 86px
 		line-height: 1.05
@@ -839,6 +844,8 @@ body
 		-webkit-text-fill-color: transparent
 		background-clip: text
 		text-fill-color: transparent
+		position: relative
+		z-index: 1
 
 .footer
 	padding-top: 50px

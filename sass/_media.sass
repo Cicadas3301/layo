@@ -259,6 +259,24 @@
                 position: relative
                 right: -44px
 
+    .services
+        &_left
+            padding-left: 0
+            padding-right: 0
+            margin-top: 80px
+        .row
+            flex-direction: column-reverse
+        &_image
+            justify-content: center
+        &--reverse
+            .services
+                &_left
+                    padding-left: 0
+                &_image
+                    justify-content: center
+            .row
+                flex-direction: column
+
 // ≥768px
 @media (max-width: 767.90px)
 
@@ -396,6 +414,11 @@
 
     .send
         background: none
+        &--services
+            .send_parallax
+                &#par1
+                    bottom: auto
+                    top: -50px
         &_title
             font-size: 52px
         &_form
@@ -434,6 +457,30 @@
 
     .text
         margin-bottom: 0
+
+    .services
+        padding-bottom: 140px
+        &_parallax
+            &#par2
+                left: -38px
+                top: -90px
+                img
+                    width: 135px
+        &_title
+            font-size: 26px
+        &_desc
+            font-size: 16px
+
+    .info
+        &_item + &_item
+            margin-top: 24px
+        &_item
+            padding: 24px 24px 16px 24px
+            &-title
+                font-size: 26px
+            &-text
+                font-size: 16px
+                margin-left: 0
 
 // ≥576px
 @media (max-width: 575.90px)

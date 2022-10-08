@@ -119,5 +119,12 @@ $(document).ready(function () {
 		$(this.hash).addClass('active');
 	})
 
+	$('.info_item').on('click', function () {
+		$(this).siblings('.info_item').removeClass('active');
+		$(this).toggleClass('active');
+		$(this).siblings('.info_item').find('.info_item-text').slideUp('');
+		$(this).find('.info_item-text').slideToggle('');
+	})
+
 });
 
